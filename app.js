@@ -2,6 +2,7 @@ require('./config');
 const path = require('path');
 const routerCars = require('./routes/cars');
 const routerHomePage = require('./routes/home');
+const routerRegister = require('./routes/register');
 const express = require('express');
 const app = express();
 
@@ -11,6 +12,7 @@ app.set('view engine', 'ejs');
 
 //router
 app.use('/', routerHomePage);
+app.use('/register', routerRegister);
 app.use('/cars', routerCars);
 
 
